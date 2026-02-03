@@ -9,7 +9,15 @@ for handling complex accounting tasks in financially driven applications.
 
 Created and developed by [Miguel Sanda](https://www.miguelsanda.com).
 
-[FREE Get Started Guide](https://www.djangoledger.com/get-started) | [Join our Discord](https://discord.gg/c7PZcbYgrc) | [Documentation](https://django-ledger.readthedocs.io/en/latest/) | [QuickStart Notebook](https://github.com/arrobalytics/django-ledger/blob/develop/notebooks/QuickStart%20Notebook.ipynb)
+[FREE Get Started Guide](https://www.djangoledger.com/get-started) | [Join our Discord](https://discord.gg/c7PZcbYgrc) | [Documentation](https://django-ledger.readthedocs.io/en/latest/) | [QuickStart Notebook](https://github.com/arrobalytics/django-ledger/blob/develop/notebooks/QuickStart%20Notebook.ipynb) | [**Business Logic Guide**](BUSINESS_LOGIC.md)
+
+## Understanding Django Ledger's Business Logic
+
+**New to the library?** Read the [**Business Logic & Model Architecture Guide**](BUSINESS_LOGIC.md) to understand:
+- The difference between **Invoices** (customer-facing, Accounts Receivable) vs **Bills** (vendor-facing, Accounts Payable)
+- How money flows through your business (revenue and expenditure cycles)
+- What each model represents and when to use it
+- Integration patterns for different business types
 
 ## Key Features
 

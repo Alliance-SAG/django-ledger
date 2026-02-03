@@ -2,11 +2,31 @@
 Django Ledger created by Miguel Sanda <msanda@arrobalytics.com>.
 Copyright© EDMA Group Inc licensed under the GPLv3 Agreement.
 
-This module implements the InvoiceModel, which represents the Sales Invoice/ Sales Invoice/ Tax Invoice/ Proof of Sale
-which the :func:`EntityModel <django_ledger.models.entity.EntityModel>` issues to its customers for the supply of
-goods or services. The model manages all the Sales Invoices which are issued by the :func:`EntityModel
-<django_ledger.models.entity.EntityModel>`. In addition to tracking the invoice amount , it tracks the receipt and
-due amount.
+This module implements the InvoiceModel, which represents Sales Invoices that YOUR BUSINESS ISSUES TO CUSTOMERS
+for the supply of goods or services.
+
+**Business Direction:**
+    - **Customer-Facing Document** - Sent TO your customers
+    - **Accounts Receivable (A/R)** - Money owed TO your business (Asset account)
+    - **Increases Revenue** - When approved, records sales revenue
+    - **Debit Balance** - Asset accounts have normal debit balances
+
+**Accounting Flow:**
+    When approved:
+        DR  Accounts Receivable    (Asset ↑)
+        CR  Sales Revenue           (Revenue ↑)
+    
+    When paid:
+        DR  Cash                    (Asset ↑)
+        CR  Accounts Receivable     (Asset ↓)
+
+**Related Models:**
+    - CustomerModel: The entity receiving the invoice (who owes you money)
+    - EstimateModel: Can be converted to invoices
+    
+**Contrast with BillModel:**
+    - **Invoice** = You send TO customers (A/R - you receive money)
+    - **Bill** = You receive FROM vendors (A/P - you pay money)
 
 Examples
 ________

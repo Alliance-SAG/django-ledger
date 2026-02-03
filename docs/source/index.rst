@@ -16,6 +16,7 @@ Created and developed by `Miguel Sanda <https://www.miguelsanda.com>`_.
    :caption: Contents:
 
    ./../../README.md
+   ./../../BUSINESS_LOGIC.md
    ./quickstart
    ./io
    ./models

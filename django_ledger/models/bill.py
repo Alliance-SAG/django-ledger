@@ -2,10 +2,39 @@
 Django Ledger created by Miguel Sanda <msanda@arrobalytics.com>.
 Copyright© EDMA Group Inc licensed under the GPLv3 Agreement.
 
-This module implements the BillModel, which represents an Invoice received from a Supplier/Vendor, on which
-the Vendor states the amount owed by the recipient for the purposes of supplying goods and/or services.
-In addition to tracking the bill amount, it tracks the paid and due amount.
+This module implements the BillModel, which represents purchase invoices/bills that YOUR BUSINESS RECEIVES FROM VENDORS
+for goods or services that you have purchased.
 
+**Business Direction:**
+    - **Vendor-Facing Document** - Received FROM your vendors/suppliers
+    - **Accounts Payable (A/P)** - Money owed BY your business (Liability account)
+    - **Increases Expenses** - When approved, records expenses or asset purchases
+    - **Credit Balance** - Liability accounts have normal credit balances
+
+**Accounting Flow:**
+    When approved:
+        DR  Expense/Asset           (Expense ↑ or Asset ↑)
+        CR  Accounts Payable        (Liability ↑)
+    
+    When paid:
+        DR  Accounts Payable        (Liability ↓)
+        CR  Cash                    (Asset ↓)
+
+**Related Models:**
+    - VendorModel: The entity sending the bill (who you owe money)
+    - PurchaseOrderModel: Can be linked to bills when goods/services are received
+    
+**Contrast with InvoiceModel:**
+    - **Bill** = You receive FROM vendors (A/P - you pay money)
+    - **Invoice** = You send TO customers (A/R - you receive money)
+
+Examples
+________
+>>> user_model = request.user  # django UserModel
+>>> entity_slug = kwargs['entity_slug'] # may come from view kwargs
+>>> bill_model = BillModel()
+>>> ledger_model, bill_model = bill_model.configure(entity_slug=entity_slug, user_model=user_model)
+>>> bill_model.save()
 """
 
 import warnings

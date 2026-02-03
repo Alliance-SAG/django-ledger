@@ -12,12 +12,15 @@ for the supply of goods or services.
     - **Debit Balance** - Asset accounts have normal debit balances
 
 **Accounting Flow:**
-    When approved:
-        DR  Accounts Receivable    (Asset ↑)
+
+When approved::
+
+    DR  Accounts Receivable    (Asset ↑)
         CR  Sales Revenue           (Revenue ↑)
-    
-    When paid:
-        DR  Cash                    (Asset ↑)
+
+When paid::
+
+    DR  Cash                    (Asset ↑)
         CR  Accounts Receivable     (Asset ↓)
 
 **Related Models:**

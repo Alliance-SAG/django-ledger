@@ -12,12 +12,15 @@ for goods or services that you have purchased.
     - **Credit Balance** - Liability accounts have normal credit balances
 
 **Accounting Flow:**
-    When approved:
-        DR  Expense/Asset           (Expense ↑ or Asset ↑)
+
+When approved::
+
+    DR  Expense/Asset           (Expense ↑ or Asset ↑)
         CR  Accounts Payable        (Liability ↑)
-    
-    When paid:
-        DR  Accounts Payable        (Liability ↓)
+
+When paid::
+
+    DR  Accounts Payable        (Liability ↓)
         CR  Cash                    (Asset ↓)
 
 **Related Models:**

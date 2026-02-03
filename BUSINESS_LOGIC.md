@@ -440,7 +440,7 @@ Cash flow is tracked separately through payment records.
 
 ### 4. Multi-Currency Support
 
-While the base models support single currency, the architecture allows extension for multi-currency operations through the `ItemModel` and transaction-level currency tracking.
+Django Ledger is designed primarily for single-currency operations. If you need multi-currency support, you will need to extend the base models. The architecture provides extension points at the `ItemModel` and transaction level, but multi-currency features are not built-in and would require custom implementation.
 
 ---
 
